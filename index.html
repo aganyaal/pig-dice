@@ -20,7 +20,7 @@
 			<h2>Do you know what pig dice is?
 	 <br><button type="button" name="YES" class="btn btn-success" id="yes">YES<i class="em em-grinning"></i></button>
 	 <p></p>
-	 <button type="button" name="NO" class="btn btn-success" id="no">NO!<i class="em em-anguished"></i></button></h2>
+	 <button type="button" name="NO" class="btn btn-success" id="no">NO!(Don't be shy)<i class="em em-anguished"></i></button></h2>
 			<div class="definition">
 				<p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
 					<ul>
@@ -41,33 +41,38 @@
 		<div class="row">
 			<div class="col-md-6 jumbotron">
 				<h3>Player 1</h3>
-				<div class="dice">0</div>
-				<button type="button" name="button" class="btn" id="roll1">Roll</button>
-				<button type="button" name="button" class="btn" id="hold1">Hold</button>
+				<div id="die1" class="dice">0</div>
+				<button type="button" name="button" class="btn" onClick="rolldice1()" id="roll1">Roll</button>
+				<button type="button" name="button" class="btn" id="hold1" onClick="hold1()">Hold</button>
 
 			</div>
 			<div class="col-md-6 jumbotron">
 				<h3>Player 2</h3>
-				<div class="dice">0</div>
-				<button type="button" name="button" class="btn" id="roll1">Roll</button>
-				<button type="button" name="button" class="btn" id="hold1">Hold</button>
+				<div id="die2" class="dice">0</div>
+				<button type="button" name="button" class="btn" onClick="rolldice2()" id="roll2">Roll</button>
+				<button type="button" name="button" class="btn" id="hold2" onClick="hold2()">Hold</button>
 			</div>
 		</div>
 		<div class="row">
 			<div id="result1" class="col-md-6 jumbotron">
 				<h3>Player 1</h3>
 				<h4>Score:</h4>
-				<span></span>
+				<span id="span1"></span>
+				<h4>Points:</h4>
+				<span id="points1"></span>
 				<h4>Total:</h4>
-				<span></span>
+				<span id="total1"></span>
 
 			</div>
+
 			<div id="result2" class="col-md-6 jumbotron">
 				<h3>Player 2</h3>
 				<h4>Score:</h4>
-				<span></span>
+				<span id="span2"></span>
+				<h4>Points:</h4>
+				<span id="points1"></span>
 				<h4>Total:</h4>
-				<span></span>
+				<span id="total2"></span>
 
 			</div>
 		</div>
