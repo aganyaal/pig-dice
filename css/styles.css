@@ -1,0 +1,39 @@
+.page1{
+  background-image: url(../images/pigs.gif);
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-repeat: no-repeat;
+}
+
+.intro{
+  padding-top: 50px;
+  width: ;
+  padding-left:10%;
+  text-align: center;
+  color: white
+}
+.dice{
+  width:32px;
+  background: #F5F5F5;
+  border: #999 1px solid;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  margin: auto;
+}
+.row{
+  text-align: center;
+}
+.definition{
+  display: none;
+  font-size: 24px;
+  background: #c0c0c0;
+  text-align: center;
+}
+#page{
+  display: none;
+}
+#result2{
+  border-left: 
+}

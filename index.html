@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>PIG DICE</title>
+</head>
+
+<body class="page1">
+	<div id="intro">
+		<div class="container intro">
+			<h1>This is a game of pig dice.</h1>
+			<h2>Do you know what pig dice is?
+	 <br><button type="button" name="YES" class="btn btn-success" id="yes">YES<i class="em em-grinning"></i></button>
+	 <p></p>
+	 <button type="button" name="NO" class="btn btn-success" id="no">NO!<i class="em em-anguished"></i></button></h2>
+			<div class="definition">
+				<p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+					<ul>
+						<li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+						<li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+						<li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+						The first player to score 100 or more points wins.</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	</div>
+	<div id="page">
+
+
+		<div class="row">
+			<div class="col-md-6 jumbotron">
+				<h3>Player 1</h3>
+				<div class="dice">0</div>
+				<button type="button" name="button" class="btn" id="roll1">Roll</button>
+				<button type="button" name="button" class="btn" id="hold1">Hold</button>
+
+			</div>
+			<div class="col-md-6 jumbotron">
+				<h3>Player 2</h3>
+				<div class="dice">0</div>
+				<button type="button" name="button" class="btn" id="roll1">Roll</button>
+				<button type="button" name="button" class="btn" id="hold1">Hold</button>
+			</div>
+		</div>
+		<div class="row">
+			<div id="result1" class="col-md-6 jumbotron">
+				<h3>Player 1</h3>
+				<h4>Score:</h4>
+				<span></span>
+				<h4>Total:</h4>
+				<span></span>
+
+			</div>
+			<div id="result2" class="col-md-6 jumbotron">
+				<h3>Player 2</h3>
+				<h4>Score:</h4>
+				<span></span>
+				<h4>Total:</h4>
+				<span></span>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
