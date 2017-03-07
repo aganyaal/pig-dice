@@ -1,39 +1,110 @@
-.page1{
+/*#live-game{
+  display: none;
   background-image: url(../images/pigs.gif);
-  background-size: cover;
+  background-size: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
   background-repeat: no-repeat;
+}*/
+
+#new-game p,li {
+  font-size: 13px;
 }
 
-.intro{
-  padding-top: 50px;
-  width: ;
-  padding-left:10%;
-  text-align: center;
-  color: white
+
+#live-game h2 {
+  color: rgb(145, 104, 168);
+  font-weight: bold;
+  font-size: 50px;
 }
-.dice{
-  width:32px;
-  background: #F5F5F5;
-  border: #999 1px solid;
-  padding: 10px;
-  text-align: center;
-  font-size: 24px;
-  margin: auto;
+#player-one h3 {
+  text-decoration: underline;
 }
-.row{
+
+#player-two h3 {
+  text-decoration: underline;
+}
+
+.form-control:focus {
+  border-color: #000;
+}
+
+#main-pig {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#start-game {
+  left: 30%;
+  position: relative;
+  background: #FF9899;
+}
+#start-game:hover {
+  background: rgb(121, 90, 21);
+}
+
+h1 {
   text-align: center;
 }
-.definition{
+
+
+/* buttons for live game */
+.game-buttons {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#play-round {
+  background: #000;
+  color: #FFF;
+}
+
+#play-round:hover {
+  background: rgb(221, 38, 148);
+}
+
+#end-turn:hover {
+  background: rgb(221, 200, 100);
+}
+
+#rolling {
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(185, 25, 25)
+}
+
+
+
+#player-one {
+  clear: both;
+}
+
+#player-one,#player-two, #scoreboard {
+  text-align: center;
+}
+
+#player-one-score,#player-two-score {
+  font-size: 40px;
+}
+
+#scoreboard {
+  font-size: 20px;
+}
+
+#roundScore {
+  font-size: 50px;
+  color: rgb(230, 29, 72);
+}
+
+#win-screen {
   display: none;
-  font-size: 24px;
-  background: #c0c0c0;
-  text-align: center;
+  margin-bottom: 600px;
 }
-#page{
-  display: none;
-}
-#result2{
-  border-left: 
+
+
+#dice-1,#dice-2 {
+  margin-right: 4px;
+  font-weight: bolder;
+  font-size: 30px;
+  color: rgb(145, 104, 168);
 }

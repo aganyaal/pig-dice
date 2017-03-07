@@ -1,79 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>PIG DICE</title>
+	<title>Pig Dice</title>
 </head>
 
-<body class="page1">
-	<div id="intro">
-		<div class="container intro">
-			<h1>This is a game of pig dice.</h1>
-			<h2>Do you know what pig dice is?
-	 <br><button type="button" name="YES" class="btn btn-success" id="yes">YES<i class="em em-grinning"></i></button>
-	 <p></p>
-	 <button type="button" name="NO" class="btn btn-success" id="no">NO!(Don't be shy)<i class="em em-anguished"></i></button></h2>
-			<div class="definition">
-				<p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h1>Pig Dice Reloaded!</h1>
+				<div id="new-game">
+					<img id="main-pig" src="images/pig.jpg" height="250" alt="pig" />
+					<form id="player-form" class="form-group">
+						<label for="player-one-name">Player One Name:</label>
+						<input type="text" name="player-one-name" id="player-one-name" class="form-control" autofocus>
+
+						<label for="player-two-name">Player Two Name:</label>
+						<input type="text" name="player-two-name" id="player-two-name" class="form-control">
+						<br>
+						<button class="btn btn-lg btn-warning" id="start-game">Start Game <span class="glyphicon glyphicon-log-in"></span></button>
+					</form>
+					<h3>How to Play:</h3>
+					<p>Each round, a player can roll a dice until either a '1' is rolled or if the player ends the turn.</p>
 					<ul>
-						<li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
-						<li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
-						<li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
-						The first player to score 100 or more points wins.</p>
+						<li>If the player rolls 1, round ends and they score '0'.</li>
+						<li>If the player rolls a number above 1, it is added to their round score.</li>
+						<li>If the player chooses to end turn, the round score is added to their personal score.</li>
+						<li>If the player rolls two 1's, their personal score is reset to zero!</li>
+					</ul>
+					<p>The first player to rack up 50 points wins.</p>
+				</div>
 			</div>
-
-		</div>
-
-	</div>
-
-	</div>
-	<div id="page">
+			<div id="live-game" class="page1">
+				<div class="col-md-3" id="player-one">
+					<h3></h3>
+					<p><span id="player-one-score"></span></p>
 
 
-		<div class="row">
-			<div class="col-md-6 jumbotron">
-				<h3>Player 1</h3>
-				<div id="die1" class="dice">0</div>
-				<button type="button" name="button" class="btn" onClick="rolldice1()" id="roll1">Roll</button>
-				<button type="button" name="button" class="btn" id="hold1" onClick="hold1()">Hold</button>
+				</div>
+				<div class="col-md-6" id="scoreboard">
+					<h2></h2>
+					<h3>Current round score:</h3>
+					<p><span id="roundScore"></span></p>
+					<p>Die <strong>ONE</strong>: <span id="dice-1"></span> </p>
+					<div class="dice dice_6"></div>
+					<div class="game-buttons">
+						<button class="btn btn-lg " id="play-round"></span>Roll</button>
+						<button class="btn btn-lg " id="end-turn"></span>Hold</button>
+					</div>
 
+				</div>
+				<div class="col-md-3" id="player-two">
+					<h3></h3>
+					<p><span id="player-two-score"></span></p>
+
+
+				</div>
 			</div>
-			<div class="col-md-6 jumbotron">
-				<h3>Player 2</h3>
-				<div id="die2" class="dice">0</div>
-				<button type="button" name="button" class="btn" onClick="rolldice2()" id="roll2">Roll</button>
-				<button type="button" name="button" class="btn" id="hold2" onClick="hold2()">Hold</button>
-			</div>
-		</div>
-		<div class="row">
-			<div id="result1" class="col-md-6 jumbotron">
-				<h3>Player 1</h3>
-				<h4>Score:</h4>
-				<span id="span1"></span>
-				<h4>Points:</h4>
-				<span id="points1"></span>
-				<h4>Total:</h4>
-				<span id="total1"></span>
-
-			</div>
-
-			<div id="result2" class="col-md-6 jumbotron">
-				<h3>Player 2</h3>
-				<h4>Score:</h4>
-				<span id="span2"></span>
-				<h4>Points:</h4>
-				<span id="points1"></span>
-				<h4>Total:</h4>
-				<span id="total2"></span>
-
+			<div id="win-screen" class="col-md-5 col-md-offset-4">
+				<h1></h1>
 			</div>
 		</div>
 	</div>
